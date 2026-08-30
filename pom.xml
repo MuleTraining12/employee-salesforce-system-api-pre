@@ -41,8 +41,7 @@
 						<environment>Sandbox</environment>
 						<target>Cloudhub-US-East-2</target>
 						<muleVersion>4.12.0</muleVersion>
-						<username>Realtime_1234</username>
-      					<password>Realtime@1234</password>
+						<server>mule-Repository</server>
 						<applicationName>${project.name}</applicationName>
 						<replicas>1</replicas>
 						<vCores>0.1</vCores>
@@ -106,5 +105,13 @@
 			</snapshots>
 		</pluginRepository>
 	</pluginRepositories>
+	<distributionManagement>
+		<repository>
+		<id>mule-Repository</id>
+		<name>Corporate Repository</name>
+		<url>https://maven.anypoint.mulesoft.com/api/v3/organizations/${project.groupId}/maven</url>
+		<layout>default</layout>
+		</repository>
+</distributionManagement>
 
 </project>
